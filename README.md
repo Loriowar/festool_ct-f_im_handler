@@ -1,5 +1,5 @@
 # Festool CT-F I/M handler
-Description of Festool CT-F I/M (button + receiver) commands. Plus Arduino firmware to convert receiver commands into more friendly digital output.
+Description of Festool CT-F I/M Set (button + receiver, [item number 202097](https://www.festool.com/accessory/dust-extraction/additions-to-the-system/modules/202097---ct-f-btm-set)) commands. Plus Arduino firmware to convert receiver commands into more friendly digital output.
 
 ## Use cases
 - Use an original Festool Button and receiver to manipulate any kind of devices, not only other Festool equipment.
@@ -9,7 +9,7 @@ Description of Festool CT-F I/M (button + receiver) commands. Plus Arduino firmw
 - [Here](https://github.com/tjob/ft-vac-control) is a good project with applying CT-F I/M to any vacuum.
 - And [here](https://github.com/jenskueper/festool-ctl-sys-bluetooth) is remote control for Festool CTL SYS vacuum.
 
-## How to assenble and get it works?
+## How to assemble and get it works?
 - Upload firmware to Arduino.
 - Attach Festool receive to Arduino `D4` (mid wire on the receiver). You can use 5V from Arduino to power the receiver (lowest receiver wire is ground, uppest +5V).
 - Optional, add pull-down resistor (10kOm) to `D4`.
