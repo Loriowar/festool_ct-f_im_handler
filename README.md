@@ -27,7 +27,7 @@ After power-on `D8` has low level. In case of receiving `0x177F` it sets high le
 Just an Arduino Nano.
 
 ## Software
-Arduino firmware can be fount in the repo.
+Arduino firmware can be found [in the repo](https://github.com/Loriowar/festool_ct-f_im_handler/blob/main/festool_receiver_manchester.ino).
 
 ### Pins description
 - `D4` - input data from the receiver.
@@ -35,7 +35,7 @@ Arduino firmware can be fount in the repo.
 - `D13` (led) - duplicates a D8 status.
 
 ## Receiver data protocol
-Here is a [good explanation](https://github.com/tjob/ft-vac-control?tab=readme-ov-file#how-it-works)https://github.com/tjob/ft-vac-control?tab=readme-ov-file#how-it-works of the data protocol together with a [serial trace](https://github.com/tjob/ft-vac-control/tree/main/software/traces). Below you can find more details about the protocol. It was collected using the mentioned Arduino firmware (see commented debug code in the firmware).
+Here is a [good explanation](https://github.com/tjob/ft-vac-control?tab=readme-ov-file#how-it-works) of the data protocol together with a [serial trace](https://github.com/tjob/ft-vac-control/tree/main/software/traces). Below you can find more details about the protocol. It was collected using the mentioned Arduino firmware (see commented debug code in the firmware).
 
 ### Receiver messages
 NOTE: there might be wrong parsing and/or wrong bits order. All below data taken from only one Festool buttion+receiver pair. Please, verify the commands on your device before usage.
@@ -69,6 +69,8 @@ Received value hex (bin) = 0 (0)
 Received value hex (bin) = 3BFF (11101111111111)
 ```
 Zero messages are artifacts of the parsing. You can ignor it.
+
+Different set of messages has different delay between messages within the set (from ~50ms to hundreds ms).
 
 Fast double click might generate one additional message `0x2FF`:
 ```
